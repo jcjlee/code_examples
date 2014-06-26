@@ -4,6 +4,7 @@
 @color-blue: #0072C6;
 @color-white: #FFFFFF;
 
+/* PAGE STYLES */
 .bg-black {
     background-color: @color-black;
     color: @color-white;
@@ -99,7 +100,6 @@
         display: none;
     }
     .collapse-circle:before {
-        .glyph-zw-empty-circle();
         font-size: 20px;
     }
     .collapsible-header, .collapsible-header.expanded {
@@ -111,9 +111,6 @@
                 .glyph-up-arrow() ; 
             }
         }
-    }
-    .collapsible-header-text {
-        margin-left: .75em;
     }
     .collapsible-body {
         margin-left: 50px;
@@ -137,47 +134,10 @@
     }
 }
 
-
 /* MIXINS */
-.glyph-font() {
-    font-family: 'Segoe UI Symbol';
-}
 .glyph-down-arrow() {
-    content: "\E0A1";
-}
-.glyph-down-arrow-light() {
-    content: "\E011";
+    content: "\f055"
 }
 .glyph-up-arrow() {
-    content: "\E0A0";
-}
-.glyph-close-button() {
-    content: "\E10A";
-}
-.glyph-exclamation() {
-    content: "\E171";
-}
-.glyph-checkmark() {
-    content: "\E10B";
-}
-.glyph-zw-empty-circle() {
-    content: "\E070";
-}
-.glyph-zw-fill-circle() {
-    content: "\E080";
-}
-.glyph-zw-empty-box() {
-    content: "\E003";
-}
-.glyph-zw-fill-box() {
-    content: "\E009";
-}
-.glyph-checkbox-checkmark() {
-    content: "\E001";
-}
-.glyph-checkbox-indeterminate() {
-    content: "\E004";
-}
-.glyph-radio-dot() {
-    content: "\E072";
+    content: "\f056"
 }

@@ -1,3 +1,4 @@
+/* PAGE STYLES */
 .bg-black {
   background-color: #1a1a1a;
   color: #ffffff;
@@ -80,7 +81,6 @@
   display: none;
 }
 .collapsible-section .collapse-circle:before {
-  content: "\E070";
   font-size: 20px;
 }
 .collapsible-section .collapsible-header,
@@ -93,16 +93,13 @@
 }
 .collapsible-section .collapsible-header .collapse-icon:before,
 .collapsible-section .collapsible-header.expanded .collapse-icon:before {
-  content: "\E0A0";
-}
-.collapsible-section .collapsible-header-text {
-  margin-left: .75em;
+  content: "\f056";
 }
 .collapsible-section .collapsible-body {
   margin-left: 50px;
 }
 .collapsible-section.collapsed > .collapsible-header .collapse-icon:before {
-  content: "\E0A1";
+  content: "\f055";
 }
 .collapsible-section .collapsible-section .collapse-circle:before {
   content: none;

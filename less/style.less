@@ -1,0 +1,183 @@
+@color-black: #1A1A1A;
+@color-dark-gray: #505050;
+@color-light-gray: #F3F3F3;
+@color-blue: #0072C6;
+@color-white: #FFFFFF;
+
+.bg-black {
+    background-color: @color-black;
+    color: @color-white;
+    &.example-tile > h2{
+        color: @color-white;
+    }
+}
+.bg-light {
+    background-color: @color-light-gray;
+}
+.example-tile {
+    & > h2 {
+        text-transform: none;
+    }
+    padding: 5px 5px 20px 5px;
+}
+
+
+/* SLIDE TOGGLE STYLES */
+.slide-toggle-container {
+    width: 130px;
+}
+
+.slide-toggle {
+    margin-left: 75px;
+    position: relative;
+
+    input[type=checkbox] {
+        height: 20px;
+        visibility: hidden;
+
+        & + label {
+            width: 50px;
+            height: 20px;
+            cursor: pointer;
+            position: absolute;
+            margin: 0;
+            top: 0;
+            left: 0;
+            background-color: @color-dark-gray;
+            border: 2px solid @color-dark-gray;
+            box-sizing: border-box;
+
+            &:before {
+                content: " ";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border: 1px solid @color-black;
+            }
+
+            .slide-toggle-switch {
+                background-color: white;
+                height: 20px;
+                width: 13px;
+                transition: left .4s ease;
+                position: absolute;
+                top: -2px;
+                left: -2px;
+            }
+        }
+        & ~ span:before {
+            content: "Off";
+        }
+
+        &:checked {
+            & + label {
+                background-color: @color-blue;
+                .slide-toggle-switch {
+                    left: 35px;
+                }
+            }
+            & ~ span:before {
+                content: "On";
+            }
+        }
+    }
+    .slide-toggle-status {
+        top: -8px;
+        left: -90px;
+        position: relative;
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+
+.collapsible-section {
+    &.start-collapsed > .collapsible-body {
+        display: none;
+    }
+    .collapse-circle:before {
+        .glyph-zw-empty-circle();
+        font-size: 20px;
+    }
+    .collapsible-header, .collapsible-header.expanded {
+        cursor: pointer;
+
+        .collapse-icon {
+            margin-left: 1px;
+            &:before {
+                .glyph-up-arrow() ; 
+            }
+        }
+    }
+    .collapsible-header-text {
+        margin-left: .75em;
+    }
+    .collapsible-body {
+        margin-left: 50px;
+    }
+    &.collapsed {
+
+        & > .collapsible-header .collapse-icon:before {
+            .glyph-down-arrow();
+        }
+    }
+    .collapsible-section {
+        .collapse-circle:before {
+            content: none;
+        }
+        span.collapse-icon {
+            font-size: 24px;
+        }
+        .collapsible-body {
+            margin-left: 36px;
+        }
+    }
+}
+
+
+/* MIXINS */
+.glyph-font() {
+    font-family: 'Segoe UI Symbol';
+}
+.glyph-down-arrow() {
+    content: "\E0A1";
+}
+.glyph-down-arrow-light() {
+    content: "\E011";
+}
+.glyph-up-arrow() {
+    content: "\E0A0";
+}
+.glyph-close-button() {
+    content: "\E10A";
+}
+.glyph-exclamation() {
+    content: "\E171";
+}
+.glyph-checkmark() {
+    content: "\E10B";
+}
+.glyph-zw-empty-circle() {
+    content: "\E070";
+}
+.glyph-zw-fill-circle() {
+    content: "\E080";
+}
+.glyph-zw-empty-box() {
+    content: "\E003";
+}
+.glyph-zw-fill-box() {
+    content: "\E009";
+}
+.glyph-checkbox-checkmark() {
+    content: "\E001";
+}
+.glyph-checkbox-indeterminate() {
+    content: "\E004";
+}
+.glyph-radio-dot() {
+    content: "\E072";
+}
